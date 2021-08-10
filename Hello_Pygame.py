@@ -1,6 +1,5 @@
 import pygame
 import sys
-from colors import *
 from icecream import ic
 
 pygame.init()
@@ -23,14 +22,16 @@ jump = False
 jumpCount = 10
 
 while game_run:
-    pygame.time.delay(100)
+    pygame.time.delay(10)
 
+    # TODO: добавить хендлер событий
     for event in pygame.event.get():
         ic(event)
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
 
+    # TODO: добавить хендлер нажатий клавиш
     keys = pygame.key.get_pressed()
     if keys[pygame.K_LEFT] and x > 5:
         x -= speed
@@ -54,6 +55,6 @@ while game_run:
             jump = False
             jumpCount = 10
 
-    window.fill(BLACK)
-    pygame.draw.rect(window, BLUE, (x, y, w, h))
+    window.fill((0, 0, 0))
+    pygame.draw.rect(window, (0, 0, 255), (x, y, w, h))
     pygame.display.update()
