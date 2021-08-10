@@ -1,5 +1,11 @@
 {
   "h": 800,
   "w": 600,
-  "name": "Hello PyGAME"
+  "name": "Hello PyGAME",
+  "border": {
+    "top": 5,
+    "bottom": 5,
+    "left": 5,
+    "right": 5
+  }
 }
